@@ -23,6 +23,9 @@ public sealed class Family : SafeHandleZeroOrMinusOneIsInvalid
     public static Family CreateTagStandard41h12()
       => _CreateTagStandard41h12();
 
+    public static Family CreateTag36h11()
+      => _CreateTag36h11();
+
     #endregion
 
     #region Unmanaged interface
@@ -32,6 +35,12 @@ public sealed class Family : SafeHandleZeroOrMinusOneIsInvalid
 
     [DllImport(Config.DllName, EntryPoint = "tagStandard41h12_destroy")]
     private static extern void _DestroyTagStandard41h12(IntPtr ptr);
+
+    [DllImport(Config.DllName, EntryPoint = "tag36h11_create")]
+    private static extern Family _CreateTag36h11();
+
+    [DllImport(Config.DllName, EntryPoint = "tag36h11_destroy")]
+    private static extern void _DestroyTag36h11(IntPtr ptr);
 
     #endregion
 }

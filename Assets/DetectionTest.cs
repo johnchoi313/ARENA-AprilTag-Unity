@@ -7,7 +7,7 @@ sealed class DetectionTest : MonoBehaviour
 {
     [SerializeField] ImageSource _source = null;
     [SerializeField] int _decimation = 4;
-    [SerializeField] float _tagSize = 0.05f;
+    [SerializeField] float _tagSize = 0.15f;
     [SerializeField] Material _tagMaterial = null;
     [SerializeField] UI.RawImage _webcamPreview = null;
     [SerializeField] UI.Text _debugText = null;
