@@ -22,6 +22,9 @@ sealed class TagDrawer : System.IDisposable
     {
         var xform = Matrix4x4.TRS(position, rotation, Vector3.one * scale);
         Graphics.DrawMesh(_mesh, xform, _sharedMaterial, 0);
+        
+        Debug.Log("Detected Tag with ID[" + id + "].");
+
     }
 
     static Mesh BuildMesh()

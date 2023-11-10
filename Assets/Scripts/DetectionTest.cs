@@ -43,7 +43,7 @@ sealed class DetectionTest : MonoBehaviour
         // Detected tag visualization
         foreach (var tag in _detector.DetectedTags)
             _drawer.Draw(tag.ID, tag.Position, tag.Rotation, _tagSize);
-
+            
         // Profile data output (with 30 frame interval)
         if (Time.frameCount % 30 == 0)
             _debugText.text = _detector.ProfileData.Aggregate
