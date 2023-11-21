@@ -13,6 +13,7 @@ namespace RuntimeSceneGizmo
 		private Transform mainCamParent;
 
 		public float moveSpeed = 1;
+		public float scrollSpeed = 1;
 
 		private void Awake()
 		{
@@ -43,16 +44,19 @@ namespace RuntimeSceneGizmo
 				prevMousePos = mousePos;
 			}
 
-
-			//Move
-			//transform.localEulerAngles = new Vector3(freefly ? xAngle : 0, yAngle, 0);
+			//Move Forward/Backward/Left/Right with WASD
 			transform.Translate(Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime, 0, Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime);
+			
+			//Move Forward/Backward with Mouse Wheel, or Up/Down with Shift + Mouse Wheel
+			if(Input.GetKey(KeyCode.LeftShift)) {
+				transform.position += new Vector3(0,Input.GetAxis("Mouse ScrollWheel") * scrollSpeed * Time.deltaTime,0);
+			} else {
+				transform.Translate(0, 0, Input.GetAxis("Mouse ScrollWheel") * scrollSpeed * Time.deltaTime);
+			}
+		
 			//Move Up/Down using R/F keys
             if(Input.GetKey(KeyCode.R)) { transform.position += new Vector3(0,moveSpeed * Time.deltaTime,0); }
             if(Input.GetKey(KeyCode.F)) { transform.position += new Vector3(0,-moveSpeed * Time.deltaTime,0); }
-
-
-
 		}
 	}
 }
