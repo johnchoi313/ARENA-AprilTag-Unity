@@ -191,63 +191,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224153425668364128, guid: 5814e191475da55449e996c6052e2ef7, type: 3}
   m_PrefabInstance: {fileID: 1963064560}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1287035760
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1341065248009016, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
-      propertyPath: m_Name
-      value: SceneGizmo
-      objectReference: {fileID: 0}
-    - target: {fileID: 4114986414790964, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7777
-      objectReference: {fileID: 0}
-    - target: {fileID: 4114986414790964, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -7777
-      objectReference: {fileID: 0}
-    - target: {fileID: 4114986414790964, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7777
-      objectReference: {fileID: 0}
-    - target: {fileID: 4114986414790964, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4114986414790964, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4114986414790964, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4114986414790964, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4114986414790964, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4114986414790964, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4114986414790964, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2540e6c6fdb6c234891b3f071266d6dc, type: 3}
 --- !u!1 &1452100573
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,12 +252,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452100573}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1536111039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1536111035
 GameObject:
@@ -329,7 +272,7 @@ GameObject:
   - component: {fileID: 1536111037}
   - component: {fileID: 1536111036}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -411,6 +354,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 874222736}
+  - {fileID: 1452100576}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -429,7 +373,7 @@ GameObject:
   - component: {fileID: 1721485972}
   - component: {fileID: 1721485971}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ARENA Scene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -609,6 +553,7 @@ GameObject:
   - component: {fileID: 2109984515}
   - component: {fileID: 2109984514}
   - component: {fileID: 2109984513}
+  - component: {fileID: 2109984516}
   m_Layer: 0
   m_Name: Editor Main Camera
   m_TagString: MainCamera
@@ -690,6 +635,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 141881973}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2109984516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109984512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c0ad0e8e55c95c4e931911c4b943a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space: 1
+  transformType: 0
+  pivot: 0
+  centerType: 0
+  scaleType: 0
+  SetMoveType: 119
+  SetRotateType: 101
+  SetScaleType: 114
+  SetAllTransformType: 121
+  SetSpaceToggle: 120
+  SetPivotModeToggle: 122
+  SetCenterTypeToggle: 99
+  SetScaleTypeToggle: 115
+  translationSnapping: 306
+  AddSelection: 304
+  RemoveSelection: 306
+  ActionKey: 304
+  UndoAction: 122
+  RedoAction: 121
+  xColor: {r: 1, g: 0, b: 0, a: 0.8}
+  yColor: {r: 0, g: 1, b: 0, a: 0.8}
+  zColor: {r: 0, g: 0, b: 1, a: 0.8}
+  allColor: {r: 0.7, g: 0.7, b: 0.7, a: 0.8}
+  selectedColor: {r: 1, g: 1, b: 0, a: 0.8}
+  hoverColor: {r: 1, g: 0.75, b: 0, a: 0.8}
+  planesOpacity: 0.5
+  movementSnap: 0.25
+  rotationSnap: 15
+  scaleSnap: 1
+  handleLength: 0.25
+  handleWidth: 0.003
+  planeSize: 0.035
+  triangleSize: 0.03
+  boxSize: 0.03
+  circleDetail: 40
+  allMoveHandleLengthMultiplier: 1
+  allRotateHandleLengthMultiplier: 1.4
+  allScaleHandleLengthMultiplier: 1.6
+  minSelectedDistanceCheck: 0.01
+  moveSpeedMultiplier: 1
+  scaleSpeedMultiplier: 1
+  rotateSpeedMultiplier: 1
+  allRotateSpeedMultiplier: 20
+  useFirstSelectedAsMain: 1
+  circularRotationMethod: 0
+  forceUpdatePivotPointOnChange: 1
+  maxUndoStored: 100
+  manuallyHandleGizmo: 0
+  selectionMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -697,5 +705,3 @@ SceneRoots:
   - {fileID: 1721485972}
   - {fileID: 141881973}
   - {fileID: 1536111039}
-  - {fileID: 1452100576}
-  - {fileID: 1287035760}

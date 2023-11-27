@@ -23,9 +23,8 @@ namespace RuntimeSceneGizmo
 		private void Update()
 		{
 
-			if( Input.GetMouseButtonDown( 0 ) )
-				prevMousePos = Input.mousePosition;
-			else if( Input.GetMouseButton( 0 ) )
+			if( Input.GetMouseButtonDown( 1 ) ) { prevMousePos = Input.mousePosition; }
+			else if( Input.GetMouseButton( 1 ) )
 			{
 				Vector3 mousePos = Input.mousePosition;
 				Vector2 deltaPos = ( mousePos - prevMousePos ) * sensitivity;
